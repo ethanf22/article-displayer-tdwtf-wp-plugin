@@ -1,7 +1,7 @@
 <?php
 
 
-namespace TDWTFWidget;
+namespace TDWTFPlugin;
 
 
 class Controller{
@@ -14,7 +14,7 @@ class Controller{
 	public function init()
 	{
 		/** Register shortcode */
-		add_shortcode ( 'tdwtf_widget', array( $this, 'shortCode') );
+		add_shortcode ( 'tdwtf_plugin', array( $this, 'shortCode') );
 
 		add_action( 'wp_enqueue_scripts', function(){
 			wp_enqueue_media();
@@ -40,7 +40,7 @@ class Controller{
 			$article = Article::getRandomArticle();
 		}
 
-		include(WDWTF_PLUGIN_ABSOLUTE_PATH . "/views/widget.php");
+		include(WDWTF_PLUGIN_ABSOLUTE_PATH . "/views/plugin.php");
 	}
 
 	/**
@@ -57,7 +57,7 @@ class Controller{
 				__('Settings', 'tdwtf-domain-string'),
 				__('TDWTF Settings', 'tdwtf-domain-string'),
 				'manage_options',
-				'tdwtf-widget-settings',
+				'tdwtf-plugin-settings',
 				array( $this, 'registerSettingsPage' )
 			);
 
@@ -65,8 +65,8 @@ class Controller{
 			$this->registerSettings();
 		} );
 
-		add_action( 'wp_ajax_nopriv_tdwtf_widget_get_article_by_id', array( $this, 'getArticleById' ) );
-		add_action( 'wp_ajax_tdwtf_widget_get_article_by_id', array( $this, 'getArticleById' ) );
+		add_action( 'wp_ajax_nopriv_tdwtf_plugin_get_article_by_id', array( $this, 'getArticleById' ) );
+		add_action( 'wp_ajax_tdwtf_plugin_get_article_by_id', array( $this, 'getArticleById' ) );
 	}
 
 	public function getArticleById() {
@@ -85,7 +85,7 @@ class Controller{
 	public function registerSettingsLink( $links )
 	{
 		$mylinks = array(
-			'<a href="' . admin_url( 'options-general.php?page=tdwtf-widget-settings' ) . '">Settings</a>',
+			'<a href="' . admin_url( 'options-general.php?page=tdwtf-plugin-settings' ) . '">Settings</a>',
 		);
 
 		return array_merge( $links, $mylinks );

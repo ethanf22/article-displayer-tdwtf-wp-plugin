@@ -1,7 +1,7 @@
 <?php
 
 
-namespace TDWTFWidget;
+namespace TDWTFPlugin;
 
 
 class Author {

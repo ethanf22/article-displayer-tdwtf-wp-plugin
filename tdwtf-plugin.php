@@ -1,9 +1,9 @@
 <?php
 
 /*
-Plugin Name: TDWTF Article Widget
+Plugin Name: TDWTF Article Plugin
 Plugin URI: http://www.spokanewp.com
-Description: A widget to display a description and link to the most recent TDWTF article.
+Description: A plugin to display a description and link to the most recent TDWTF article.
 Version: 1.0
 Author: Ethan Federman
 Author URI: http://www.spokanewp.com
@@ -20,7 +20,7 @@ spl_autoload_register( function( $class_name ) {
 	require_once $classes_dir . $class_file;
 } );
 
-$controller = new \TDWTFWidget\Controller();
+$controller = new \TDWTFPlugin\Controller();
 
 //register_activation_hook( __FILE__, array( $controller, 'init' ) );
 
