@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Article Displayer for The Daily WTF ===
 Contributors: efederman22
 Donate link: https://www.paypal.me/EFederman
 Tags: thedailywtf, humor, technology, daily, wtf
@@ -19,13 +19,13 @@ it will also let you skip back and forth through articles by date.
 
 Upload the plugin files to the `/wp-content/plugins/tdwtf-plugin` directory, or install the plugin through the WordPress plugins screen directly.
 
-* Use `[tdwtf_plugin]` to add an article display to your page
+* Use `[article-displayer-for-tdwtf]` to add an article display to your page
 
 == Frequently Asked Questions ==
 
 = How to use this plugin? =
 
-Add the short tag `[tdwtf_plugin]` to any page.
+Add the short tag `[article-displayer-for-tdwtf]` to any page.
 
 == Screenshots ==
 

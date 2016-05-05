@@ -14,7 +14,7 @@ class Controller{
 	public function init()
 	{
 		/** Register shortcode */
-		add_shortcode ( 'tdwtf_plugin', array( $this, 'shortCode') );
+		add_shortcode ( 'article-displayer-for-tdwtf', array( $this, 'shortCode') );
 
 		add_action( 'wp_enqueue_scripts', function(){
 			wp_enqueue_media();
