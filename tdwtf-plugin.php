@@ -11,14 +11,11 @@ License: GPL2
 */
 
 define( 'WDWTF_PLUGIN_ABSOLUTE_PATH', dirname(__FILE__) );
-define( 'TDWTF_BASEPLUGIN_PATH', plugin_basename(__FILE__) );
 define( 'TDWTF_PLUGIN_DIR', plugin_dir_url(__FILE__) . '/' );
 
-spl_autoload_register( function( $class_name ) {
-	$classes_dir = realpath( plugin_dir_path( __FILE__ ) ) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR;
-	$class_file = str_replace( '\\', DIRECTORY_SEPARATOR, ltrim( $class_name, '\\' ) ) . '.php';
-	require_once $classes_dir . $class_file;
-} );
+require_once("src/TDWTFPlugin/Article.php");
+require_once("src/TDWTFPlugin/Author.php");
+require_once("src/TDWTFPlugin/Controller.php");
 
 $controller = new \TDWTFPlugin\Controller();
 
